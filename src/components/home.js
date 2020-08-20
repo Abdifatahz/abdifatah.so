@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "@reach/router";
 import Profile from "../assets/img/profile.jpg";
+import "../index.css";
 
 class App extends React.Component {
   state = {
@@ -37,6 +38,7 @@ class App extends React.Component {
           </div>
           <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
             <div
+              id="nav"
               className={`text-sm lg:flex-grow ${
                 isBoxVisible ? "hidden md:block flex flex-col" : "sm:block"
               }`}
@@ -94,14 +96,14 @@ class App extends React.Component {
               <div className="w-full text-orange-500 font-bold text-3xl text-center d-block">
                 Side projects
               </div>
-              <div className="flex justify-around">
-                <h4 className="bg-orange-600 p-4 text-gray-200 font-bold text-lg text-center w-1/2 m-2">
+              <div className="flex flex-col  justify-around sm:flex-row">
+                <h4 className="bg-orange-600 p-4 text-gray-200 font-bold text-lg text-center sm:w-1/2 m-2">
                   Learning Management System
                 </h4>
-                <h4 className="bg-orange-600 p-4 text-gray-200 font-bold text-lg text-center w-1/2 m-2">
+                <h4 className="bg-orange-600 p-4 text-gray-200 font-bold text-lg text-center sm:w-1/2 m-2">
                   Humar Resource
                 </h4>
-                <h4 className="bg-orange-600 p-4 text-gray-200 font-bold text-lg text-center w-1/2 m-2">
+                <h4 className="bg-orange-600 p-4 text-gray-200 font-bold text-lg text-center sm:w-1/2 m-2">
                   Online Exmination
                 </h4>
               </div>
