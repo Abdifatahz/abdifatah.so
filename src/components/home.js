@@ -6,18 +6,26 @@ import "../index.css";
 class App extends React.Component {
   state = {
     isBoxVisible: true,
+    darkMode: false,
   };
 
   toggle = () => {
     this.setState((prevState) => ({ isBoxVisible: !prevState.isBoxVisible }));
   };
 
+  changeMode = () => {
+    this.setState((prevState) => ({ darkMode: !prevState.darkMode }));
+  };
+
   render() {
-    const { isBoxVisible } = this.state;
-    console.log(isBoxVisible);
+    const { isBoxVisible, darkMode } = this.state;
+
     return (
       <div className="w-full mx-auto max-w-6xl">
-        <nav class="flex items-center justify-between flex-wrap bg-indigo-700 p-6 items-center py-4 font-sans ">
+        <nav
+          className={`flex items-center justify-between flex-wrap  p-6 items-center py-4 font-sans 
+          ${darkMode ? "bg-gray-800" : "bg-indigo-700"}`}
+        >
           <div class="flex items-center flex-shrink-0 text-white mr-6">
             <span class="font-semibold text-xl tracking-tight">
               Abdifatah A
@@ -70,15 +78,20 @@ class App extends React.Component {
               <Link
                 className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
                 to="/"
+                onClick={this.changeMode.bind()}
               >
-                Dark
+                {darkMode ? "Light" : "Dark"}
               </Link>
             </div>
           </div>
         </nav>
 
         <section className="w-full  mx-auto flex flex-col sm:flex-row">
-          <section className="md:w-2/3 bg-indigo-800 p-8 text-right">
+          <section
+            className={`md:w-2/3  p-8 text-right ${
+              darkMode ? "bg-gray-900" : "bg-indigo-800"
+            }`}
+          >
             <h4 className="text-orange-400 text-4xl">Abdifatah Abdilahi</h4>
             <p className="text-gray-200">
               I'm a Fullstack Enginner in Mogadishu
@@ -109,24 +122,52 @@ class App extends React.Component {
               </div>
             </div>
           </section>
-          <aside className="md:w-1/3 bg-gray-200 flex flex-col justify-center items-center">
+          <aside
+            className={`md:w-1/3  flex flex-col justify-center items-center ${
+              darkMode
+                ? "bg-gray-900 border-l-2 border-gray-600"
+                : "bg-gray-200"
+            }`}
+          >
             <img
               className="rounded-full border-8 my-4 w-64 h-64 border-indigo-500"
               src={Profile}
             />
 
             <div className="my-5 w-full">
-              <div className="w-full text-indigo-500 font-bold text-3xl text-center d-block">
+              <div
+                className={`w-full  font-bold text-3xl text-center d-block ${
+                  darkMode ? "text-yellow-500" : "text-indigo-500"
+                }`}
+              >
                 Professional
               </div>
               <div className="flex flex-col justify-around flex-start">
-                <h4 className="border-2 border-orange-600 p-4 text-indigo-800 font-bold text-2xl text-center  m-2">
+                <h4
+                  className={`border-2  font-bold text-2xl text-center  m-2 ${
+                    darkMode
+                      ? "border-gray-400 p-4 text-yellow-500"
+                      : "border-orange-600 p-4 text-indigo-800"
+                  }`}
+                >
                   Laravel
                 </h4>
-                <h4 className="border-2 border-orange-600 p-4 text-indigo-800 font-bold text-2xl text-center  m-2">
+                <h4
+                  className={`border-2  font-bold text-2xl text-center  m-2 ${
+                    darkMode
+                      ? "border-gray-400 p-4 text-yellow-500"
+                      : "border-orange-600 p-4 text-indigo-800"
+                  }`}
+                >
                   React
                 </h4>
-                <h4 className="border-2 border-orange-600 p-4 text-indigo-800 font-bold text-2xl text-center  m-2">
+                <h4
+                  className={`border-2  font-bold text-2xl text-center  m-2 ${
+                    darkMode
+                      ? "border-gray-400 p-4 text-yellow-500"
+                      : "border-orange-600 p-4 text-indigo-800"
+                  }`}
+                >
                   Tailwind
                 </h4>
               </div>
