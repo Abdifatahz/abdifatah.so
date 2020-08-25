@@ -76,11 +76,11 @@ class App extends React.Component {
               }`}
             >
               <Link
-                className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
+                className="inline-block text-2xl px-4 py-2  text-white  mt-4 lg:mt-0 mode"
                 to="/"
                 onClick={this.changeMode.bind()}
               >
-                {darkMode ? "Light" : "Dark"}
+                {darkMode ? "🌞" : "🌙"}
               </Link>
             </div>
           </div>
@@ -168,7 +168,7 @@ class App extends React.Component {
                       : "border-orange-600 p-4 text-indigo-800"
                   }`}
                 >
-                  Tailwind
+                  TailwindCSS
                 </h4>
               </div>
             </div>

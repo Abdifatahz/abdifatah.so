@@ -16,3 +16,11 @@ code {
 #nav {
   transition: transform 0.15s ease-in-out;
 }
+
+.bg-indigo-700,
+.bg-indigo-700,
+.bg-gray-800,
+.bg-gray-900,
+.bg-gray-200 {
+  transition: background-color 0.5s ease-out;
+}
