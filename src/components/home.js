@@ -111,13 +111,24 @@ class App extends React.Component {
               </div>
               <div className="flex flex-col  justify-around sm:flex-row">
                 <h4 className="bg-orange-600 p-4 text-gray-200 font-bold text-lg text-center sm:w-1/2 m-2">
-                  Learning Management System
+                  <b title="Learning Management System">LMS</b>
                 </h4>
-                <h4 className="bg-orange-600 p-4 text-gray-200 font-bold text-lg text-center sm:w-1/2 m-2">
-                  Humar Resource
+                <h4 className="bg-yellow-600 p-4 text-gray-200 font-bold text-lg text-center sm:w-1/2 m-2">
+                  Human Resource
                 </h4>
-                <h4 className="bg-orange-600 p-4 text-gray-200 font-bold text-lg text-center sm:w-1/2 m-2">
+                <h4 className="bg-gray-600 p-4 text-gray-200 font-bold text-lg text-center sm:w-1/2 m-2">
                   Online Exmination
+                </h4>
+              </div>
+              <div className="flex flex-col  justify-around sm:flex-row">
+                <h4 className="bg-red-600 p-4 text-gray-200 font-bold text-lg text-center sm:w-1/2 m-2">
+                  <b title="Learning Management System">Somcoders.com</b>
+                </h4>
+                <h4 className="bg-green-600 p-4 text-gray-200 font-bold text-lg text-center sm:w-1/2 m-2">
+                  Somcoders Mobile
+                </h4>
+                <h4 className="bg-blue-600 p-4 text-gray-200 font-bold text-lg text-center sm:w-1/2 m-2">
+                  School Management
                 </h4>
               </div>
             </div>
@@ -144,7 +155,7 @@ class App extends React.Component {
               </div>
               <div className="flex flex-col justify-around flex-start">
                 <h4
-                  className={`border-2  font-bold text-2xl text-center  m-2 ${
+                  className={`border-1  font-bold text-2xl text-center  m-2 ${
                     darkMode
                       ? "border-gray-400 p-4 text-yellow-500"
                       : "border-orange-600 p-4 text-indigo-800"
@@ -153,7 +164,7 @@ class App extends React.Component {
                   Laravel
                 </h4>
                 <h4
-                  className={`border-2  font-bold text-2xl text-center  m-2 ${
+                  className={`border-1  font-bold text-2xl text-center  m-2 ${
                     darkMode
                       ? "border-gray-400 p-4 text-yellow-500"
                       : "border-orange-600 p-4 text-indigo-800"
@@ -162,7 +173,7 @@ class App extends React.Component {
                   React
                 </h4>
                 <h4
-                  className={`border-2  font-bold text-2xl text-center  m-2 ${
+                  className={`border-1  font-bold text-2xl text-center  m-2 ${
                     darkMode
                       ? "border-gray-400 p-4 text-yellow-500"
                       : "border-orange-600 p-4 text-indigo-800"
