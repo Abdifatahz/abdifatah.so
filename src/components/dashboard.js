@@ -83,7 +83,7 @@ class Dashboard extends React.Component {
             </div>
             <div className="flex flex-col justify-around flex-start">
               <h4
-                className={`border-1  font-bold text-2xl text-center  m-2 ${
+                className={`border-1  font-bold text-2xl text-center transform hover:rotate-180 transition  duration-150 ease-in-out  m-2 ${
                   this.props.mode
                     ? "border-gray-400 p-4 text-yellow-500"
                     : "border-orange-600 p-4 text-indigo-800"
@@ -92,7 +92,7 @@ class Dashboard extends React.Component {
                 Laravel
               </h4>
               <h4
-                className={`border-1  font-bold text-2xl text-center  m-2 ${
+                className={`border-1  font-bold text-2xl text-center transform hover:rotate-180 transition  duration-150 ease-in-out  m-2 ${
                   this.props.mode
                     ? "border-gray-400 p-4 text-yellow-500"
                     : "border-orange-600 p-4 text-indigo-800"
@@ -101,7 +101,7 @@ class Dashboard extends React.Component {
                 React
               </h4>
               <h4
-                className={`border-1  font-bold text-2xl text-center  m-2 ${
+                className={`border-1  font-bold text-2xl text-center transform hover:rotate-180 transition  duration-150 ease-in-out  m-2 ${
                   this.props.mode
                     ? "border-gray-400 p-4 text-yellow-500"
                     : "border-orange-600 p-4 text-indigo-800"

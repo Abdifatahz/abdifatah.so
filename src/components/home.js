@@ -82,8 +82,8 @@ class App extends React.Component {
               }`}
             >
               <Link
-                className="inline-block text-2xl px-4 py-2  text-white  mt-4 lg:mt-0 mode"
-                to="/"
+                className="inline-block text-2xl px-4 py-2 transition  duration-700 ease-in-out text-white  mt-4 lg:mt-0 mode"
+                to="#"
                 onClick={this.changeMode.bind()}
               >
                 {darkMode ? "🌞" : "🌙"}
