@@ -93,9 +93,9 @@ class App extends React.Component {
         </nav>
         <Router>
           {/* <Home path="/" /> */}
-          <Dashboard path="/" />
-          <Resume path="/resume" />
-          <Contact path="/contact" />
+          <Dashboard path="/" mode={this.state.darkMode} />
+          <Resume path="/resume" mode={this.state.darkMode} />
+          <Contact path="/contact" mode={this.state.darkMode} />
         </Router>
       </div>
     );

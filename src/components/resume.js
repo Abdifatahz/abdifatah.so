@@ -3,26 +3,11 @@ import "../index.css";
 import "../timeline.css";
 
 class Dashboard extends React.Component {
-  state = {
-    isBoxVisible: true,
-    darkMode: false,
-  };
-
-  toggle = () => {
-    this.setState((prevState) => ({ isBoxVisible: !prevState.isBoxVisible }));
-  };
-
-  changeMode = () => {
-    this.setState((prevState) => ({ darkMode: !prevState.darkMode }));
-  };
-
   render() {
-    const { isBoxVisible, darkMode } = this.state;
-
     return (
       <div
         className={`min-h-screen bg-gray-100 ${
-          darkMode ? "bg-gray-900" : "bg-gray-100"
+          this.props.mode ? "bg-gray-900" : "bg-gray-100"
         }`}
       >
         <div className="min-h-screen flex justify-center">

@@ -5,25 +5,19 @@ import "../index.css";
 class Dashboard extends React.Component {
   state = {
     isBoxVisible: true,
-    darkMode: false,
   };
 
   toggle = () => {
     this.setState((prevState) => ({ isBoxVisible: !prevState.isBoxVisible }));
   };
 
-  changeMode = () => {
-    this.setState((prevState) => ({ darkMode: !prevState.darkMode }));
-  };
-
   render() {
-    const { isBoxVisible, darkMode } = this.state;
-
+    const { isBoxVisible } = this.state;
     return (
       <section className="w-full  mx-auto flex flex-col sm:flex-row">
         <section
           className={`md:w-2/3  p-8 text-right ${
-            darkMode ? "bg-gray-900" : "bg-indigo-800"
+            this.props.mode ? "bg-gray-900" : "bg-indigo-800"
           }`}
         >
           <h4 className="text-orange-400 text-4xl">Abdifatah Abdilahi</h4>
@@ -69,7 +63,9 @@ class Dashboard extends React.Component {
 
         <aside
           className={`md:w-1/3  flex flex-col justify-center items-center ${
-            darkMode ? "bg-gray-900 border-l-2 border-gray-600" : "bg-gray-200"
+            this.props.mode
+              ? "bg-gray-900 border-l-2 border-gray-600"
+              : "bg-gray-200"
           }`}
         >
           <img
@@ -80,7 +76,7 @@ class Dashboard extends React.Component {
           <div className="my-5 w-full">
             <div
               className={`w-full  font-bold text-3xl text-center d-block ${
-                darkMode ? "text-yellow-500" : "text-indigo-500"
+                this.props.mode ? "text-yellow-500" : "text-indigo-500"
               }`}
             >
               Professional
@@ -88,7 +84,7 @@ class Dashboard extends React.Component {
             <div className="flex flex-col justify-around flex-start">
               <h4
                 className={`border-1  font-bold text-2xl text-center  m-2 ${
-                  darkMode
+                  this.props.mode
                     ? "border-gray-400 p-4 text-yellow-500"
                     : "border-orange-600 p-4 text-indigo-800"
                 }`}
@@ -97,7 +93,7 @@ class Dashboard extends React.Component {
               </h4>
               <h4
                 className={`border-1  font-bold text-2xl text-center  m-2 ${
-                  darkMode
+                  this.props.mode
                     ? "border-gray-400 p-4 text-yellow-500"
                     : "border-orange-600 p-4 text-indigo-800"
                 }`}
@@ -106,7 +102,7 @@ class Dashboard extends React.Component {
               </h4>
               <h4
                 className={`border-1  font-bold text-2xl text-center  m-2 ${
-                  darkMode
+                  this.props.mode
                     ? "border-gray-400 p-4 text-yellow-500"
                     : "border-orange-600 p-4 text-indigo-800"
                 }`}
