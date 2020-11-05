@@ -30,10 +30,10 @@ class App extends React.Component {
           <div class="flex items-center flex-shrink-0 text-white mr-6">
             <span class="font-semibold text-xl tracking-tight">
               <Link
-                className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 "
+                className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 text-2xl hover:text-yellow-500 mr-4 "
                 to="/"
               >
-                Abdifatah A
+                Abdifatah Abdilahi
               </Link>
             </span>
           </div>
@@ -50,7 +50,7 @@ class App extends React.Component {
               </svg>
             </button>
           </div>
-          <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+          <div class="w-full lg:flex lg:items-center lg:w-auto lg:justify-items-end">
             <div
               id="nav"
               className={`text-sm lg:flex-grow ${
@@ -58,19 +58,19 @@ class App extends React.Component {
               }`}
             >
               <Link
-                className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 "
+                className="block mt-4 text-xl lg:inline-block lg:mt-0 text-teal-200 hover:text-yellow-400 mr-4 "
                 to="/"
               >
                 Home
               </Link>
               <Link
-                className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 "
+                className="block mt-4 text-xl lg:inline-block lg:mt-0 text-teal-200 hover:text-yellow-400 mr-4 "
                 to="/resume"
               >
                 Resume
               </Link>
               <Link
-                className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 "
+                className="block mt-4 text-xl lg:inline-block lg:mt-0 text-teal-200 hover:text-yellow-400 mr-4 "
                 to="/contact"
               >
                 Contact

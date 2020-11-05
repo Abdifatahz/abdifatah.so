@@ -57,7 +57,7 @@ class Dashboard extends React.Component {
                 <b title="Learning Management System">Somcoders.com</b>
               </h4>
               <h4 className="bg-green-600 p-4 text-gray-200 font-bold text-lg text-center sm:w-1/2 m-2">
-                Somcoders Mobile
+                Somcoders Android
               </h4>
               <h4 className="bg-blue-600 p-4 text-gray-200 font-bold text-lg text-center sm:w-1/2 m-2">
                 School Management
