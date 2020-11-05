@@ -27,8 +27,8 @@ class App extends React.Component {
           className={`flex items-center justify-between flex-wrap  p-6 items-center py-4 font-sans 
           ${darkMode ? "bg-gray-800" : "bg-indigo-700"}`}
         >
-          <div class="flex items-center flex-shrink-0 text-white mr-6">
-            <span class="font-semibold text-xl tracking-tight">
+          <div className="flex items-center flex-shrink-0 text-white mr-6">
+            <span className="font-semibold text-xl tracking-tight">
               <Link
                 className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 text-2xl hover:text-yellow-500 mr-4 "
                 to="/"
@@ -37,10 +37,10 @@ class App extends React.Component {
               </Link>
             </span>
           </div>
-          <div class="block lg:hidden">
-            <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+          <div className="block lg:hidden">
+            <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
               <svg
-                class="fill-current h-6 w-6"
+                className="fill-current h-6 w-6"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
                 onClick={this.toggle.bind()}
@@ -50,7 +50,7 @@ class App extends React.Component {
               </svg>
             </button>
           </div>
-          <div class="w-full lg:flex lg:items-center lg:w-auto lg:justify-items-end">
+          <div className="w-full lg:flex lg:items-center lg:w-auto lg:justify-items-end">
             <div
               id="nav"
               className={`text-sm lg:flex-grow ${
