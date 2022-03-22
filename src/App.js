@@ -1,10 +1,10 @@
 import React,{useState} from "react";
 import { Router, Link } from "@reach/router";
 import "./assets/main.css";
-import Home from "./components/home";
-import Resume from "./components/resume";
-import Contact from "./components/contact";
-import Footer from "./components/footer";
+import Home from "./components/Home";
+import Resume from "./components/Resume";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 
 function App() {

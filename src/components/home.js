@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import "../index.css";
-import Main from "./main";
-import Sidebar from "./sidebar";
+import Main from "./Main";
+import Sidebar from "./Sidebar";
 import Nav from "./Nav";
 
 
