@@ -2,18 +2,20 @@ import React,{useState,useContext} from "react";
 import "../index.css";
 import Nav from "./Nav";
 import { ThemeContext } from '../context/ThemeContextProvider';
+import { TogglerContext } from "../context/TogglerContextProvider";
 import Profile from "../assets/img/profile.jpg";
 
 
-function App({toggleMenu,isBoxVisible}){
+function App(){
   
   const {darkMode,changeMode} = useContext(ThemeContext);
+  const {toggle,toggler}      = useContext(TogglerContext);
 
     return (
       <div className="w-full mx-auto max-w-6xl">
         <Nav  
-              toggleMenu={toggleMenu}
-              isBoxVisible={isBoxVisible}
+              toggleMenu={toggler}
+              isBoxVisible={toggle}
          />
         <section className="w-full  mx-auto flex flex-col sm:flex-row">
           <section
