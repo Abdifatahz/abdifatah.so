@@ -4,6 +4,7 @@ import { ThemeContext } from '../context/ThemeContextProvider';
 import Profile from "../assets/img/profile.jpg";
 import ProjectHeading from './ProjectHeading'
 import LanguageHeading from './LanguageHeading'
+import Footer from "./Footer";
 
 
 function App(){
@@ -77,8 +78,10 @@ function App(){
           </div>
           </aside>
         </section>
-    
+        <Footer />
+      
       </div>
+      
     );
 }
 

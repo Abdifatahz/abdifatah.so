@@ -1,5 +1,6 @@
 import React,{useContext} from "react";
 import { ThemeContext } from '../context/ThemeContextProvider';
+import Footer from "./Footer";
 import Nav from "./Nav";
 
 function Contact(){
@@ -97,6 +98,8 @@ function Contact(){
             </div>
           </form>
         </section>
+      <Footer />
+
       </div>
     );
 }

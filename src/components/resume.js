@@ -2,6 +2,7 @@ import React,{useContext} from "react";
 import "../timeline.css";
 import { ThemeContext } from '../context/ThemeContextProvider';
 import Nav from "./Nav";
+import Footer from "./Footer";
 
 function Resume(){
 
@@ -147,6 +148,8 @@ function Resume(){
             </div>
           </div>
         </div>
+      <Footer />
+
       </div>
     );
 }
