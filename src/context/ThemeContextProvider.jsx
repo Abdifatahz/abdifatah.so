@@ -4,10 +4,12 @@ const ThemeContext = createContext();
 
 function ThemeContextProvider(props) {
 
-  const [darkMode,setDarkMode]  = useState(true);
+  const [darkMode,setDarkMode]  = useState("light");
 
+  const themeSwitcher = darkMode === "light" ? "dark" : "light";
+  
   function changeMode(){
-    setDarkMode(!darkMode);
+    setDarkMode(themeSwitcher);
   };
 
     return (

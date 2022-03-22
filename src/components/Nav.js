@@ -15,7 +15,7 @@ function Nav() {
     return (
         <nav
         className={`flex items-center justify-between flex-wrap  p-6 items-center py-4 font-sans 
-        ${darkMode ? "bg-gray-800" : "bg-indigo-700"}`}
+        ${darkMode === "dark" ? "bg-gray-800" : "bg-indigo-700"}`}
       >
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <span className="font-semibold text-xl tracking-tight">
@@ -46,7 +46,7 @@ function Nav() {
                 className="inline-block text-2xl px-4 py-2 transition  duration-700 ease-in-out text-white lg:mt-0 mode"
                 to="#" onClick={changeMode}
               >
-              {darkMode ? <BsSunFill/> : <MdDarkMode />}
+              {darkMode === "dark" ? <BsSunFill/> : <MdDarkMode />}
             </Link>
           </div>
         </div>

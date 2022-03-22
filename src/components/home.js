@@ -15,7 +15,7 @@ function App(){
         <section className="w-full  mx-auto flex flex-col sm:flex-row">
           <section
             className={`md:w-2/3  p-8 text-right ${
-              darkMode ? "bg-gray-900" : "bg-indigo-800"
+              darkMode === 'dark' ? "bg-gray-900" : "bg-indigo-800"
             }`}
             >
             <h4 className="text-orange-400 text-4xl">Abdifatah Abdilahi</h4>
@@ -60,7 +60,7 @@ function App(){
           </section>
           <aside
           className={`md:w-1/3  flex flex-col justify-center items-center ${
-            darkMode
+            darkMode === "dark"
               ? "bg-gray-900 border-l-2 border-gray-600"
               : "bg-gray-200"
           }`}
@@ -73,7 +73,7 @@ function App(){
           <div className="my-5 w-full">
             <div
               className={`w-full  font-bold text-3xl text-center d-block ${
-                darkMode ? "text-yellow-500" : "text-indigo-500"
+                darkMode === "dark" ? "text-yellow-500" : "text-indigo-500"
               }`}
             >
               Professional
@@ -81,7 +81,7 @@ function App(){
             <div className="flex flex-col justify-around flex-start">
               <h4
                 className={`border-1  font-bold text-2xl text-center transform hover:rotate-180 transition  duration-150 ease-in-out  m-2 ${
-                  darkMode
+                  darkMode === "dark"
                     ? "border-gray-400 p-4 text-yellow-500"
                     : "border-orange-600 p-4 text-indigo-800"
                 }`}
@@ -90,7 +90,7 @@ function App(){
               </h4>
               <h4
                 className={`border-1  font-bold text-2xl text-center transform hover:rotate-180 transition  duration-150 ease-in-out  m-2 ${
-                  darkMode
+                  darkMode === "dark"
                     ? "border-gray-400 p-4 text-yellow-500"
                     : "border-orange-600 p-4 text-indigo-800"
                 }`}
@@ -99,7 +99,7 @@ function App(){
               </h4>
               <h4
                 className={`border-1  font-bold text-2xl text-center transform hover:rotate-180 transition  duration-150 ease-in-out  m-2 ${
-                  darkMode
+                  darkMode === "dark"
                     ? "border-gray-400 p-4 text-yellow-500"
                     : "border-orange-600 p-4 text-indigo-800"
                 }`}
