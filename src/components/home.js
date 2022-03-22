@@ -5,13 +5,11 @@ import Sidebar from "./Sidebar";
 import Nav from "./Nav";
 
 
-function App({darkMode,toggleMenu,isBoxVisible,changeMode}){
+function App({toggleMenu,isBoxVisible}){
 
     return (
       <div className="w-full mx-auto max-w-6xl">
         <Nav  
-              darkMode={darkMode} 
-              changeMode={changeMode}
               toggleMenu={toggleMenu}
               isBoxVisible={isBoxVisible}
          />

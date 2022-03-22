@@ -1,8 +1,10 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { Router, Link } from "@reach/router";
+import { ThemeContext } from '../context/ThemeContextProvider';
 
-
-function Nav({darkMode,toggleMenu,isBoxVisible,changeMode}) {
+function Nav({toggleMenu,isBoxVisible}) {
+  
+    const {darkMode,changeMode} = useContext(ThemeContext);
     return (
         <nav
         className={`flex items-center justify-between flex-wrap  p-6 items-center py-4 font-sans 
