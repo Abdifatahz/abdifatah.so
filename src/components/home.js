@@ -3,6 +3,7 @@ import "../index.css";
 import Nav from "./Nav";
 import { ThemeContext } from '../context/ThemeContextProvider';
 import Profile from "../assets/img/profile.jpg";
+import ProjectHeading from './ProjectHeading'
 
 
 function App(){
@@ -35,26 +36,15 @@ function App(){
               </div>
 
               <div className="flex flex-col  justify-around sm:flex-row">
-                <h4 className="bg-orange-600 p-4 text-gray-200 font-bold text-lg text-center transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110 sm:w-1/2 m-2">
-                  <b title="Learning Management System">LMS</b>
-                </h4>
-                <h4 className="bg-yellow-600 p-4 text-gray-200 font-bold text-lg text-center transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110 sm:w-1/2 m-2">
-                  Human Resource
-                </h4>
-                <h4 className="bg-gray-600 p-4 text-gray-200 font-bold text-lg text-center transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110  sm:w-1/2 m-2">
-                  Online Exmination
-                </h4>
+                <ProjectHeading bg="bg-orange-600">LMS</ProjectHeading>
+                <ProjectHeading bg="bg-yellow-600">Human Resource</ProjectHeading>
+                <ProjectHeading bg="bg-gray-600">Online Exmination</ProjectHeading>
+      
               </div>
               <div className="flex flex-col  justify-around sm:flex-row">
-                <h4 className="bg-red-600 p-4 text-gray-200 font-bold text-lg text-center transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110 sm:w-1/2 m-2">
-                  <b title="Learning Management System">Somcoders.com</b>
-                </h4>
-                <h4 className="bg-green-600 p-4 text-gray-200 font-bold text-lg text-center transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110 sm:w-1/2 m-2">
-                  Somcoders Android
-                </h4>
-                <h4 className="bg-blue-600 p-4 text-gray-200 font-bold text-lg text-center transition duration-500 ease-in-out  transform hover:-translate-y-1 hover:scale-110 sm:w-1/2 m-2">
-                  School Management
-                </h4>
+                <ProjectHeading bg="bg-red-600">Somcoders.com</ProjectHeading>
+                <ProjectHeading bg="bg-blue-600">Somcoders Android</ProjectHeading>
+                <ProjectHeading bg="bg-green-600">School Management</ProjectHeading>
               </div>
             </div>
           </section>
