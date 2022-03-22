@@ -1,26 +1,22 @@
-import React from "react";
+import React,{useState} from "react";
 import { Router, Link } from "@reach/router";
 import "../index.css";
 import Dashboard from "./dashboard";
 import Resume from "./resume";
 import Contact from "./contact";
 
-class App extends React.Component {
-  state = {
-    isBoxVisible: true,
-    darkMode: false,
+function App(){
+  const [darkMode,setDarkMode]          = useState(true);
+  const [isBoxVisible,setIsBoxVisible]  = useState(true);
+
+  function toggleMenu (){
+    setIsBoxVisible(!isBoxVisible);
   };
 
-  toggle = () => {
-    this.setState((prevState) => ({ isBoxVisible: !prevState.isBoxVisible }));
+  function changeMode(){
+    setDarkMode(!darkMode);
   };
 
-  changeMode = () => {
-    this.setState((prevState) => ({ darkMode: !prevState.darkMode }));
-  };
-
-  render() {
-    const { isBoxVisible, darkMode } = this.state;
     return (
       <div className="w-full mx-auto max-w-6xl">
         <nav
@@ -43,7 +39,7 @@ class App extends React.Component {
                 className="fill-current h-6 w-6"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
-                onClick={this.toggle.bind()}
+                onClick={toggleMenu}
               >
                 <title>Menu</title>
                 <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -84,7 +80,7 @@ class App extends React.Component {
               <Link
                 className="inline-block text-2xl px-4 py-2 transition  duration-700 ease-in-out text-white  mt-4 lg:mt-0 mode"
                 to="#"
-                onClick={this.changeMode.bind()}
+                onClick={changeMode}
               >
                 {darkMode ? "🌞" : "🌙"}
               </Link>
@@ -93,13 +89,12 @@ class App extends React.Component {
         </nav>
         <Router>
           {/* <Home path="/" /> */}
-          <Dashboard path="/" mode={this.state.darkMode} />
-          <Resume path="/resume" mode={this.state.darkMode} />
-          <Contact path="/contact" mode={this.state.darkMode} />
+          <Dashboard path="/" mode={darkMode} />
+          <Resume path="/resume" mode={darkMode} />
+          <Contact path="/contact" mode={darkMode} />
         </Router>
       </div>
     );
-  }
 }
 
 export default App;
