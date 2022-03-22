@@ -1,10 +1,13 @@
 import React,{useContext} from 'react';
 import { Router, Link } from "@reach/router";
 import { ThemeContext } from '../context/ThemeContextProvider';
+import { TogglerContext } from "../context/TogglerContextProvider";
 
-function Nav({toggleMenu,isBoxVisible}) {
+function Nav() {
   
     const {darkMode,changeMode} = useContext(ThemeContext);
+    const {toggle,toggler}      = useContext(TogglerContext);
+
     return (
         <nav
         className={`flex items-center justify-between flex-wrap  p-6 items-center py-4 font-sans 
@@ -26,7 +29,7 @@ function Nav({toggleMenu,isBoxVisible}) {
               className="fill-current h-6 w-6"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
-              onClick={toggleMenu}
+              onClick={toggler}
             >
               <title>Menu</title>
               <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -37,7 +40,7 @@ function Nav({toggleMenu,isBoxVisible}) {
           <div
             id="nav"
             className={`text-sm lg:flex-grow ${
-              isBoxVisible ? "hidden md:block flex flex-col" : "sm:block"
+              toggle ? "hidden md:block flex flex-col" : "sm:block"
             }`}
           >
             <Link
@@ -61,7 +64,7 @@ function Nav({toggleMenu,isBoxVisible}) {
           </div>
           <div
             className={`${
-              isBoxVisible ? "hidden md:block flex flex-col" : "sm:block"
+              toggle ? "hidden md:block flex flex-col" : "sm:block"
             }`}
           >
             <Link
