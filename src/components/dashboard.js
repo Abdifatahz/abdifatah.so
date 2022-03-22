@@ -1,26 +1,22 @@
-import React from "react";
-import "../index.css";
-import Sidebar from "./sidebar";
-import Main from "./main";
+// import React from "react";
+// import "../index.css";
 
-class Dashboard extends React.Component {
-  state = {
-    isBoxVisible: true,
-  };
 
-  toggle = () => {
-    this.setState((prevState) => ({ isBoxVisible: !prevState.isBoxVisible }));
-  };
+// class Dashboard extends React.Component {
+//   state = {
+//     isBoxVisible: true,
+//   };
 
-  render() {
-    const { isBoxVisible } = this.state;
-    return (
-      <section className="w-full  mx-auto flex flex-col sm:flex-row">
-          <Main />
-          <Sidebar />
-      </section>
-    );
-  }
-}
+//   toggle = () => {
+//     this.setState((prevState) => ({ isBoxVisible: !prevState.isBoxVisible }));
+//   };
 
-export default Dashboard;
+//   render() {
+//     const { isBoxVisible } = this.state;
+//     return (
+    
+//     );
+//   }
+// }
+
+// export default Dashboard;

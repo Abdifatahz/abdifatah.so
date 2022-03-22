@@ -1,21 +1,11 @@
 import React,{useState} from "react";
 import { Router, Link } from "@reach/router";
 import "../index.css";
-import Dashboard from "./dashboard";
-import Resume from "./resume";
-import Contact from "./contact";
+import Main from "./main";
+import Sidebar from "./sidebar";
 
-function App(){
-  const [darkMode,setDarkMode]          = useState(true);
-  const [isBoxVisible,setIsBoxVisible]  = useState(true);
 
-  function toggleMenu (){
-    setIsBoxVisible(!isBoxVisible);
-  };
-
-  function changeMode(){
-    setDarkMode(!darkMode);
-  };
+function App({darkMode,toggleMenu,isBoxVisible,changeMode}){
 
     return (
       <div className="w-full mx-auto max-w-6xl">
@@ -87,12 +77,11 @@ function App(){
             </div>
           </div>
         </nav>
-        <Router>
-          {/* <Home path="/" /> */}
-          <Dashboard path="/" mode={darkMode} />
-          <Resume path="/resume" mode={darkMode} />
-          <Contact path="/contact" mode={darkMode} />
-        </Router>
+        <section className="w-full  mx-auto flex flex-col sm:flex-row">
+          <Main />
+          <Sidebar />
+        </section>
+    
       </div>
     );
 }
