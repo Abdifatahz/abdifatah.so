@@ -1,7 +1,8 @@
 import React,{useContext} from 'react';
-import { Router, Link } from "@reach/router";
+import { Link } from "@reach/router";
 import { ThemeContext } from '../context/ThemeContextProvider';
 import { TogglerContext } from "../context/TogglerContextProvider";
+import MenuLink from './MenuLink';
 
 function Nav() {
   
@@ -15,12 +16,7 @@ function Nav() {
       >
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <span className="font-semibold text-xl tracking-tight">
-            <Link
-              className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 text-2xl hover:text-yellow-500 mr-4 "
-              to="/"
-            >
-              Abdifatah Abdilahi
-            </Link>
+            <MenuLink to="/"> Abdifatah Abdilahi</MenuLink>
           </span>
         </div>
         <div className="block lg:hidden">
@@ -43,24 +39,11 @@ function Nav() {
               toggle ? "hidden md:block flex flex-col" : "sm:block"
             }`}
           >
-            <Link
-              className="block mt-4 text-xl lg:inline-block lg:mt-0 text-teal-200 hover:text-yellow-400 mr-4 "
-              to="/"
-            >
-              Home
-            </Link>
-            <Link
-              className="block mt-4 text-xl lg:inline-block lg:mt-0 text-teal-200 hover:text-yellow-400 mr-4 "
-              to="/resume"
-            >
-              Resume
-            </Link>
-            <Link
-              className="block mt-4 text-xl lg:inline-block lg:mt-0 text-teal-200 hover:text-yellow-400 mr-4 "
-              to="/contact"
-            >
-              Contact
-            </Link>
+
+            <MenuLink to="/" >Home</MenuLink>
+            <MenuLink to="/resume">Resume</MenuLink>
+            <MenuLink to="/contact">Contact</MenuLink>
+
           </div>
           <div
             className={`${
