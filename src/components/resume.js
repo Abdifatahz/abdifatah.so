@@ -1,15 +1,18 @@
-import React from "react";
-import "../index.css";
+import React,{useState,useContext} from "react";
 import "../timeline.css";
+import { ThemeContext } from '../context/ThemeContextProvider';
+import Nav from "./Nav";
 
-class Dashboard extends React.Component {
-  render() {
+function Resume(){
+
+  const {darkMode,changeMode} = useContext(ThemeContext);
+
     return (
-      <div
-        className={`min-h-screen bg-gray-100 ${
-          this.props.mode ? "bg-gray-900" : "bg-gray-100"
+      <div className={`w-full min-h-screen ${
+          darkMode === 'dark'? "bg-gray-900" : "bg-gray-100"
         }`}
       >
+          <Nav />
         <div className="min-h-screen flex justify-center">
           <div className="w-2/3 mx-auto">
             <div className="flex flex-row w-full">
@@ -146,7 +149,6 @@ class Dashboard extends React.Component {
         </div>
       </div>
     );
-  }
 }
 
-export default Dashboard;
+export default Resume;

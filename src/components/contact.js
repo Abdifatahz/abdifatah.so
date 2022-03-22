@@ -1,14 +1,18 @@
-import React from "react";
-import "../index.css";
+import React,{useState,useContext} from "react";
+import { ThemeContext } from '../context/ThemeContextProvider';
+import Nav from "./Nav";
 
-class Contact extends React.Component {
-  render() {
+function Contact(){
+
+  const {darkMode,changeMode} = useContext(ThemeContext);
+
     return (
       <div
         className={`min-h-screen bg-gray-100 ${
-          this.props.mode ? "bg-gray-900" : "bg-gray-100"
+          darkMode == "dark" ? "bg-gray-900" : "bg-gray-100"
         }`}
       >
+        <Nav />
         <section className="w-3/4  mx-auto flex flex-col sm:flex-row">
           <form className="mt-10">
             <div className="flex flex-wrap -mx-3 mb-6">
@@ -95,7 +99,6 @@ class Contact extends React.Component {
         </section>
       </div>
     );
-  }
 }
 
 export default Contact;
