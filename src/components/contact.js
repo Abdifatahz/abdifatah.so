@@ -1,15 +1,15 @@
-import React,{useState,useContext} from "react";
+import React,{useContext} from "react";
 import { ThemeContext } from '../context/ThemeContextProvider';
 import Nav from "./Nav";
 
 function Contact(){
 
-  const {darkMode,changeMode} = useContext(ThemeContext);
+  const {darkMode} = useContext(ThemeContext);
 
     return (
       <div
         className={`min-h-screen bg-gray-100 ${
-          darkMode == "dark" ? "bg-gray-900" : "bg-gray-100"
+          darkMode === "dark" ? "bg-gray-900" : "bg-gray-100"
         }`}
       >
         <Nav />

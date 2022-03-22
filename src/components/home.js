@@ -1,4 +1,4 @@
-import React,{useState,useContext} from "react";
+import React,{useContext} from "react";
 import Nav from "./Nav";
 import { ThemeContext } from '../context/ThemeContextProvider';
 import Profile from "../assets/img/profile.jpg";
@@ -8,7 +8,7 @@ import LanguageHeading from './LanguageHeading'
 
 function App(){
   
-  const {darkMode,changeMode} = useContext(ThemeContext);
+  const {darkMode} = useContext(ThemeContext);
 
     return (
       <div className="min-h-screen bg-gray-100">
@@ -58,6 +58,7 @@ function App(){
           <img
             className="rounded-full border-8 my-4 w-64 h-64 border-indigo-500"
             src={Profile}
+            alt="profile-logo"
           />
 
           <div className="my-5 w-full">

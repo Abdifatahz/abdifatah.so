@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "@reach/router";
+import { NavLink } from 'react-router-dom';
 
 function MenuLink(props) {
   const classes = [
@@ -14,11 +14,11 @@ function MenuLink(props) {
   ].join(" ");
   
     return (
-        <Link className={classes}
+        <NavLink className={classes}
         to={props.to}
       >
     {props.children}
-      </Link>
+      </NavLink>
     );
 }
 

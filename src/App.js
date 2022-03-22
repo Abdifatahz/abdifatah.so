@@ -1,11 +1,11 @@
-import React,{useState,useContext} from "react";
-import { Router, Link } from "@reach/router";
+import React from "react";
 import "./assets/main.css";
 import Home from "./components/Home";
 import Resume from "./components/Resume";
 import Contact from "./components/Contact";
 import {ThemeContextProvider} from "./context/ThemeContextProvider";
 import { TogglerContextProvider } from "./context/TogglerContextProvider";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 
 function App() {
@@ -14,11 +14,13 @@ function App() {
       <ThemeContextProvider>
         <TogglerContextProvider>
           <div className="App bg-blue-100 h-64">
-              <Router>
-                  <Home     path="/"  />
-                  <Resume   path="/resume" />
-                  <Contact  path="/contact" />
-              </Router>
+              <BrowserRouter>
+                <Routes>
+                    <Route  path="/"        element={<Home/>} />
+                    <Route  path="/resume"  element={<Resume/>} />
+                    <Route  path="/contact" element={<Contact/>} />
+                </Routes>
+              </BrowserRouter>
           </div>
         </TogglerContextProvider>
       </ThemeContextProvider>

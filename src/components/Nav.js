@@ -1,5 +1,5 @@
 import React,{useContext} from 'react';
-import { Link } from "@reach/router";
+import { NavLink } from 'react-router-dom';
 import { ThemeContext } from '../context/ThemeContextProvider';
 import { TogglerContext } from "../context/TogglerContextProvider";
 import MenuLink from './MenuLink';
@@ -42,12 +42,12 @@ function Nav() {
             <MenuLink to="/contact">Contact</MenuLink>
           </div>
           <div className={`${toggle ? "hidden md:block flex flex-col mt-3" : "sm:block"}`}>
-            <Link
+            <NavLink
                 className="inline-block text-2xl px-4 py-2 transition  duration-700 ease-in-out text-white lg:mt-0 mode"
                 to="#" onClick={changeMode}
               >
               {darkMode === "dark" ? <BsSunFill/> : <MdDarkMode />}
-            </Link>
+            </NavLink>
           </div>
         </div>
       </nav>

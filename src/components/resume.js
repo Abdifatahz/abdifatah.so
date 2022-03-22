@@ -1,11 +1,11 @@
-import React,{useState,useContext} from "react";
+import React,{useContext} from "react";
 import "../timeline.css";
 import { ThemeContext } from '../context/ThemeContextProvider';
 import Nav from "./Nav";
 
 function Resume(){
 
-  const {darkMode,changeMode} = useContext(ThemeContext);
+  const {darkMode} = useContext(ThemeContext);
 
     return (
       <div className={`w-full min-h-screen ${
