@@ -1,13 +1,12 @@
 import React from "react";
 import "../index.css";
 
-class Main extends React.Component {
+function Main(props){
 
-  render() {
    return(
         <section
           className={`md:w-2/3  p-8 text-right ${
-            this.props.mode ? "bg-gray-900" : "bg-indigo-800"
+            props.mode ? "bg-gray-900" : "bg-indigo-800"
           }`}
           >
           <h4 className="text-orange-400 text-4xl">Abdifatah Abdilahi</h4>
@@ -51,7 +50,6 @@ class Main extends React.Component {
           </div>
         </section>
    )
-  }
 }
 
 export default Main;
